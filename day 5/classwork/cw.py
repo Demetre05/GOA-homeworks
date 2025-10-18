@@ -1,4 +1,4 @@
-name = input("please enter your name: ")
+name = input("please enter your name ")
 number1 = input("print first number: ")
 number2 = input("print second number: ")
 
