@@ -18,6 +18,6 @@ for i in range(0, 21, 2):
 
 num = int(input())
 a = num + i
-for i in range(5):
+for a in range(5):
     print(a)
 print(a/5)
