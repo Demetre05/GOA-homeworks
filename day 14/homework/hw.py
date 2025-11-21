@@ -16,8 +16,8 @@ for i in range(0, 21, 2):
     print(i)
 
 
-num = int(input())
-a = num + i
-for a in range(5):
-    print(a)
-print(a/5)
+b = 0
+for i in range(5):
+    a = int(input("enter number: "))
+    b = b+a
+print(b/5)
