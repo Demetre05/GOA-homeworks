@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Register</h1>
+    <form>
+        <label for="first name">First Name</label><br>
+            <input type="text" id="first name" placeholder="Enter Your First Name" name="First Name" required><br><br>
+        <label for="last name">Last Name</label><br>
+            <input type="text" id="last name" placeholder="Enter Your Last Name" name="Last Name"><br><br>
+        <label for="email">Email</label><br>
+            <input type="email" id="email" placeholder="Enter Your Email" name="Email"><br><br>
+        <label for="password">Password</label><br>
+            <input type="password" id="password" placeholder="Enter Your Password" name="Password" required><br><br>
+        <label>Gender</label><br>
+            <input type="radio" id="male" name="Gender" value="Male">
+        <label for="male">Male</label>
+            <input type="radio" id="female" name="Gender" value="Female">
+        <label for="female">Female</label>
+    </form>
+
+<br><br><br><br><br><br><br>
+
+<!--
+
+1) radio ტიპის ატრიბუტი გამოიყენება რამდენიმე ვარიანტიდან ერთ-ერთის ასარჩევად(გასაფერადებლად).
+2) name ატრიბუტი არის სია მონაცემთა ბაზაში, რომელშიც იწერება მომხმარებლის მიერ ჩაწერილი მნიშვნელობები.
+3) placeholder ატრიბუტი არის განმარტება, თუ რა უნდა ჩავწეროთ გარკვეულ input-ში. input-ის შიგნით ჩანს და ქრება, როცა რაღაცის წერას
+იწებს მომხმარებელი.
+4) required ატრიბუტი განსაზღვრავს, სავალდებულოა თუ არა მისი input-ის შევსება.
+5) value ატრიბუტი არის მნიშვნელობა, რომელიც გამოჩნდება მონაცემთა ბაზაში name სიის გრაფაში.
+
+-->
+
+
+    <h1>Birth</h1>
+        <form>
+            <label for="date">Date</label><br>
+                <input type="date" id="date">
+        </form>
+
+<br><br><br><br><br><br><br>
+
+    <h1>Math Question</h1>
+        <form>
+            <h3>57*86</h3>
+                    <input type="radio" id="answer1" name="Answer" value="3743">
+                <label for="answer1">3743</label>
+                    <input type="radio" id="answer2" name="Answer" value="4902">
+                <label for="answer2">4902</label>
+        </form>
+
+</body>
+</html>
