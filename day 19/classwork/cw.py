@@ -1,6 +1,6 @@
 sum = 0
 
-for num in range(5):
+for i in range(5):
     num = int(input("enter number: "))
     sum += num
 print(sum)
