@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name</label><br>
+            <input type="text" id="name" placeholder="Enter Your Name" name="Name" required><br><br>
+        <label for="surname">Surname</label><br>
+            <input type="text" id="surname" placeholder="Enter Your Surname" name="Surname"><br><br>
+        <label for="age">Age</label><br>
+            <input type="number" id="age" placeholder="Enter Your Age" name="Age" required><br><br>
+        <label>Gender</label><br>
+            <input type="radio" id="male" name="Gender" value="Male">
+        <label for="male">Male</label>
+            <input type="radio" id="female" name="Gender" value="Female">
+        <label for="female">Female</label>
+                <br><br>
+        <label for="country">Country</label>
+            <select name="Country" id="country" required>
+                <option value="Georgia" selected>Georgia</option>
+                <option value="Canada">Canada</option>
+                <option value="Germany">Germany</option>
+                <option value="USA">USA</option>
+                <option value="Spain">Spain</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Swetherland">Swetherland</option>
+                <option value="Italy">Italy</option>
+                <option value="Netherlands">Netherlands</option>
+            </select>
+                <br><br>
+        <label for="checkbox">Do You Agree to Our Terms and Conditions?</label>
+            <input type="checkbox" id="checkbox" name="Terms" required>
+                <br><br>
+            <input type="submit" required>
+    </form>
+</body>
+</html>
