@@ -10,6 +10,6 @@ print(nums[1])
 print(nums[1::2])
 
 nums1 = nums[:-1]
-print(nums1[3])
+print(nums1[len(nums1) // 2])
 
-print(nums[:4])
+print(nums[:len(nums) // 2])
