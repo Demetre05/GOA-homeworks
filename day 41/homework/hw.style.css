@@ -1,0 +1,65 @@
+/*CSS-ის წესი შედგება სელექტორისა და დეკლარაციების შეუზღუდავი რაოდენობისგან.
+დეკლარაცია შედგება კუთვნილებასა და ამ კუთვნილებისთვის მინიჭებული მნიშვნელობისგან. კუთვნილება და მნიშვნელობა ერთმანეთისგან
+უნდა იყოს გამოყოფილი ორწერტილით, ხოლო დეკლარაციები ერთმანეთისგან წერტილ-მძიმით უნდა გამოვყოთ.*/
+
+
+* {
+    text-align: center;
+}
+
+
+div p {
+    color: red;
+    background-color: blueviolet;
+    font-size: 40px;
+}
+
+
+div button, div h1 {
+    color: blue;
+}
+
+
+div button {
+    background-color: yellow;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+
+button {
+    color: green;
+    background-color: black;
+}
+
+
+h1 {
+    color: pink;
+}
+
+
+p b {
+    color: black;
+    background-color: green;
+    font-size: 60px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+
+b {
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+
+span p {
+    font-size: 35px;
+    color: chocolate;
+    background-color: rgb(18, 94, 160);
+}
+
+
+span p b {
+    background-color: white;
+}
