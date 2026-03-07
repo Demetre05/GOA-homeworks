@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+
+p {
+    text-decoration-line: line-through;
+    color: red;
+    text-decoration-color: green;
+    text-decoration-thickness: 2px;
+}
