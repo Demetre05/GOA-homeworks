@@ -1,0 +1,50 @@
+/* RGB & HEX - ეს არის ფერების ჩაწერის ხერხები, რომლებსაც ბრაუზერი აღიქვამს:
+RGB (Red, Green, Blue): ფერი იქმნება სამი ძირითადი ფერის შერევით. თითოეული ფერის ინტენსივობა იწერება 0-დან 255-მდე ციფრით.
+მაგ: rgb(255, 0, 0) (წითელი), rgb(0, 255, 0) (მწვანე), rgb(0, 0, 255) (ლურჯი). */
+
+
+body {
+    color: rgb(230, 230, 230);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.container {
+    width: 60%;
+    text-align: center;
+    border: 1px solid #1e272e;
+    padding: 5%;
+}
+
+h1 {
+    color: #e74c3c;
+    text-decoration-line: underline; 
+    text-decoration-color: rgb(0, 0, 0); 
+    text-decoration-style: dashed;
+    text-decoration-thickness: 3px;
+}
+
+.subtitle {
+    font-size: 150%;
+    text-decoration-line: overline;
+    text-decoration-color: #f1c40f;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 2px;
+}
+
+.description {
+    line-height: 1.6;
+    margin-top: 5%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 8%;
+    color: rgb(6, 53, 43);
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: rgb(60, 92, 85);
+    text-decoration-thickness: 1px;
+}

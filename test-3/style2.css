@@ -1,0 +1,23 @@
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 32px;
+    margin-right: 12px;
+}
+
+
+body {
+    background-color: black;
+}
+
+
+.menu {
+    width: 33.3rem;
+    justify-content: center;
+    margin-left: 47.5%;
+    margin-top: 300px;
+    background-color: orange;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+}
