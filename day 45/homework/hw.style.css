@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Sekuya&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    font-family: "Playwrite NO", cursive;
+    display: block;
+    text-align: center;
+    margin: 8%;
+    transition: 1s;
+}
+
+
+a:link {
+    color: #FF0000;
+    text-decoration: dotted red underline 3px;
+}
+
+
+a:hover {
+    color: orange;
+    text-decoration: dashed blue overline 2px;
+}
+
+
+a:active {
+    color: green;
+    text-decoration: wavy aqua line-through 1px;
+}
+
+
+a:visited {
+    color: rgb(0, 0, 255);
+    text-decoration: double gray underline 4px;
+}
