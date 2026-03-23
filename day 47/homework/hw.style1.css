@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+table {
+    text-align: center;
+    border-collapse: collapse;
+    width: 750px;
+    height: 225px;
+    font-size: 24px;
+}
+
+
+th, td {
+    border: solid;
+}
+
+
+div {
+    display: flex;
+    justify-content: center;
+    margin-top: 16.55%;
+}
+
+
+th {
+    background-color: green;
+    height: 45px;
+}
+
+
+tr:nth-child(even) {
+    background-color: rgb(35, 177, 212)
+}
