@@ -1,0 +1,23 @@
+ul li {
+    list-style-type: square;
+}
+
+
+ul ul li {
+    list-style-type: lower-roman;
+}
+
+
+ul ul ul li {
+    list-style-type: georgian;
+}
+
+
+ul ul li:nth-child(2) {
+    list-style-type: square;
+}
+
+
+ul ul ul li:nth-child(2) {
+    list-style-type: circle;
+}
