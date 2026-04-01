@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Sekuya&display=swap');
+
+
+
+/*
+    box-model - მასში იგულიზხმება თეგის ყველა სივრცითი მონაცემი, რომელიც საიტზეა გამოსახული:
+        1) content - სივრცე, რომელსაც ტექსტი იკავებს;
+        2) padding - დაშორება content-სა და border-ს შორის;
+        3) border - თეგის საზღვარი;
+        4) margin - დაშორება მოცემულ ელემენტსა და საიტზე მყოფ სხვა ელემენტებს შორის.
+*/
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+input {
+    padding: 5px;
+    color: greenyellow;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-self: center;
+}
+
+
+label {
+    color: purple;
+    display: flex;
+    justify-self: center;
+}
+
+
+select {
+    margin-top: 15px;
+    display: flex;
+    justify-self: center;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+form {
+    margin-top: 10%;
+}
