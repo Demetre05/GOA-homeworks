@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+div {
+    display: flex;
+    justify-self: center;
+    width: 1200px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+
+.container {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8%;
+}
+
+
+.row1, .row2 {
+    gap: 10px;
+}
+
+
+.south_korea {
+    background-image: url(./img/south\ korea.avif);
+}
+
+
+.tbilisi {
+    background-image: url(./img/tbilisi.webp);
+}
+
+
+.new_york {
+    background-image: url(./img/new\ york.jpg);
+}
+
+
+.paris {
+    background-image: url(./img/paris.jpg);
+}
+
+
+.tokyo {
+    background-image: url(./img/tokyo.jpg);
+}
+
+
+.dubai {
+    background-image: url(./img/dubai.jpg);
+}
