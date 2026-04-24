@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    justify-self: center;
+    margin-top: 10%;
+    background-color: green;
+    width: 500px;
+    height: 500px;
+}
+
+
+.child {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: relative;
+    left: 280px;
+    top: 200px;
+}
