@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Sekuya&family=ZCOOL+KuaiLe&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+
+/* position - კუთვნილება გამოიყენება თეგებზე სრული კონტროლის მოსაპოვებლად და საიტის ნებისმიერ წერტილში განსალაგებლად */
+
+
+/* static - არის ნყველა თეგის საწყისი და ქარხნული განლაგება */
+
+
+/* fixed */
+
+.h-world {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 1%;
+    background-color: purple;
+    padding: 16px;
+}
+
+
+/* relative */
+
+.container {
+    display: flex;
+    justify-self: center;
+    margin-top: 25%;
+
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+}
+
+
+/* absolute */
+
+.child {
+    position: absolute;
+    right: 200px;
+    top: 200px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
