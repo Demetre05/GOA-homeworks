@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Sekuya&family=ZCOOL+KuaiLe&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+div {
+    text-align: center;
+    font-size: 32px;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 600px 600px 600px;
+    grid-template-rows: 300px 300px 300px;
+    gap: 20px;
+    margin-top: 5%;
+}
+
+
+.japan {
+    background-image: url(./img/japan.webp);
+}
+
+
+.dubai {
+    background-image: url(./img/dubai.jpg);
+}
+
+
+.paris {
+    background-image: url(./img/paris.avif);
+}
+
+
+.tbilisi {
+    background-image: url(./img/tbilisi.jpg);
+}
+
+
+.new_york {
+    background-image: url(./img/new\ york.webp);
+}
+
+
+.south_korea {
+    background-image: url(./img/south\ korea.avif);
+}
+
+
+.japan, .dubai, .paris, .tbilisi, .new_york, .south_korea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
