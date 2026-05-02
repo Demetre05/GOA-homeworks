@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(12, 50px);
+    grid-template-columns: repeat(20, 50px);
+    grid-template-areas:
+    "r1   r1   r1   r1   c1   c1   c1   c1   c1   c1   c1   c1   b2   b2   b2   b2   b2   b2   b2   b2"
+    "r1   r1   r1   r1   c1   c1   c1   c1   c1   c1   c1   c1   b2   b2   b2   b2   b2   b2   b2   b2"
+    "r1   r1   r1   r1   c1   c1   c1   c1   c1   c1   c1   c1   b2   b2   b2   b2   b2   b2   b2   b2"
+    "r1   r1   r1   r1   b1   b1   b1   b1   b1   b1   w2   w2   w2   w2   w2   w2   r3   r3   r3   r3"
+    "r1   r1   r1   r1   b1   b1   b1   b1   b1   b1   w2   w2   w2   w2   w2   w2   r3   r3   r3   r3"
+    "r1   r1   r1   r1   b1   b1   b1   b1   b1   b1   w2   w2   w2   w2   w2   w2   r3   r3   r3   r3"
+    "w1   w1   w1   w1   b1   b1   b1   b1   b1   b1   w2   w2   w2   w2   w2   w2   r3   r3   r3   r3"
+    "w1   w1   w1   w1   b1   b1   b1   b1   b1   b1   w2   w2   w2   w2   w2   w2   r3   r3   r3   r3"
+    "w1   w1   w1   w1   b1   b1   b1   b1   b1   b1   w2   w2   w2   w2   w2   w2   r3   r3   r3   r3"
+    "w1   w1   w1   w1   r2   r2   r2   r2   r2   r2   c2   c2   c2   c2   c2   c2   r3   r3   r3   r3"
+    "w1   w1   w1   w1   r2   r2   r2   r2   r2   r2   c2   c2   c2   c2   c2   c2   r3   r3   r3   r3"
+    "w1   w1   w1   w1   r2   r2   r2   r2   r2   r2   c2   c2   c2   c2   c2   c2   r3   r3   r3   r3";
+}
+
+
+.r1 {
+    grid-area: r1;
+    background-color: red;
+    border-radius: 15px;
+}
+
+.r2 {
+    grid-area: r2;
+    background-color: red;
+    border-radius: 15px;
+}
+
+.r3 {
+    grid-area: r3;
+    background-color: red;
+    border-radius: 15px;
+}
+
+.c1 {
+    grid-area: c1;
+    background-color: cyan;
+    border-radius: 15px;
+}
+
+.c2 {
+    grid-area: c2;
+    background-color: cyan;
+    border-radius: 15px;
+}
+
+.w1 {
+    grid-area: w1;
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.w2 {
+    grid-area: w2;
+    background-color: gray;
+    border-radius: 15px;
+}
+
+.b1 {
+    grid-area: b1;
+    background-color: brown;
+    border-radius: 15px;
+}
+
+.b2 {
+    grid-area: b2;
+    background-color: brown;
+    border-radius: 15px;
+}
