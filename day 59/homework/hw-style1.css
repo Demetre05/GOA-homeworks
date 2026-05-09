@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gravitas+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+NO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Science+Gothic:wght@100..900&family=Sekuya&family=ZCOOL+KuaiLe&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    padding-top: 2.5%;
+}
+
+
+main {
+    display: grid;
+    grid-template-rows: repeat(11, 50px);
+    grid-template-columns: repeat(20, 50px);
+    gap: 30px;
+    grid-template-areas:
+    "p   p   p   p   p   p   p   p   p   p   g   g   g   g   g   w-2   w-2   w-2   w-2   w-2"
+    "p   p   p   p   p   p   p   p   p   p   g   g   g   g   g   w-2   w-2   w-2   w-2   w-2"
+    "p   p   p   p   p   p   p   p   p   p   g   g   g   g   g   w-2   w-2   w-2   w-2   w-2"
+    "p   p   p   p   p   p   p   p   p   p   g   g   g   g   g   w-2   w-2   w-2   w-2   w-2"
+    "p   p   p   p   p   p   p   p   p   p   g   g   g   g   g   w-2   w-2   w-2   w-2   w-2"
+    "p   p   p   p   p   p   p   p   p   p   g   g   g   g   g   w-2   w-2   w-2   w-2   w-2"
+    "w-1   w-1   w-1   w-1   w-1   b   b   b   b   b   b   b   b   b   b   w-2   w-2   w-2   w-2   w-2"
+    "w-1   w-1   w-1   w-1   w-1   b   b   b   b   b   b   b   b   b   b   w-2   w-2   w-2   w-2   w-2"
+    "w-1   w-1   w-1   w-1   w-1   b   b   b   b   b   b   b   b   b   b   w-2   w-2   w-2   w-2   w-2"
+    "w-1   w-1   w-1   w-1   w-1   b   b   b   b   b   b   b   b   b   b   w-2   w-2   w-2   w-2   w-2"
+    "w-1   w-1   w-1   w-1   w-1   b   b   b   b   b   b   b   b   b   b   w-2   w-2   w-2   w-2   w-2";
+}
+
+
+#p, #w-1, #g, #b, #w-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+}
+
+
+#p {
+    grid-area: p;
+    background-color: purple;
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 600px 0;
+    color: white;
+    
+}
+
+
+#w-1 {
+    grid-area: w-1;
+    background-color: white;
+}
+
+
+#g {
+    grid-area: g;
+    background-color: gray;
+    color: white;
+}
+
+
+#b {
+    grid-area: b;
+    background-color: black;
+    color: white;
+}
+
+
+#w-2 {
+    grid-area: w-2;
+    background-color: white;
+}
+
+
+main div {
+    border-radius: 10px;
+}
+
+
+main div div {
+    display: flex;
+    gap: 10px;
+}
+
+
+img {
+    width: 56px;
+    border-radius: 50%;
+}
