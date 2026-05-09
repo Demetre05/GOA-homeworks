@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    padding-top: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.blue {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: transform 3s, background-color 2s;
+    transition-delay: 1s;
+    transform-origin: top right;
+}
+
+
+.blue:hover {
+    background-color: red;
+    transform: scale(2, 1.5) translate(200px, -100px) rotate(45deg);
+}
