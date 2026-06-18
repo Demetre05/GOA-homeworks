@@ -1,4 +1,4 @@
-// default parameter - პარამეტრი, რომელსაც თავდაპირველად უკვე აქვს მნიშვნელობა, თუ ფუნქციას გამოძახებისას არ გადაეცემა არგუმენტი. მაგ:
+// default პარამეტრი - თავდაპირველად უკვე აქვს მნიშვნელობა, თუ ფუნქციას გამოძახებისას არ გადაეცემა არგუმენტი. მაგ:
 const greet = (name = "stranger") => `Hello, ${name}!`;
 
 
@@ -6,7 +6,7 @@ const info = (name, age) => `my name is ${name}, i'm ${age} years old`;
 // info('luka') დააბრუნებს "my name is luka, i'm undefined years old", რადგან პარამეტრი age არ გადაეცემა ფუნქციას.
 
 
-// functinon declaration - იწყება სიტყვით function, რასაც მოჰყვება სახელი, პარამეტრები და ბოლოს სხეული. მაგ:
+// functinon declaration - იწყება function keyword-ით, რომელსაც მოჰყვება სახელი, პარამეტრები და ბოლოს სხეული. მაგ:
 function add(a, b) {
     return a + b;
 };
