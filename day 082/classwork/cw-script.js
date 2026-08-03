@@ -1,24 +1,24 @@
-const person = {
-    name: "Demetre",
-    surname: "Ghlonti",
-    age: 16,
-    height: 187,
-    weight: 72
-};
+function Car(brand, model, mileage) {
+    this.brand = brand;
+    this.model = model;
+    this._mileage = mileage;
 
-for(const i in person) {
-    console.log(i);
-};
+    this.drive = function(km) {
+        this._mileage += km;
+    };
 
-for(const i in person) {
-    console.log(person[i]);
-};
+    this.info = function() {
+        return `${this.brand} ${this.model} has driven ${this._mileage} km.`;
+    };
+}
 
-for(const [key, value] of Object.entries(person)) {
-    console.log(`Key: ${key}; Value: ${value}`);
-};
+const car1 = new Car("Toyota", "Corolla", 40000);
+const car2 = new Car("BMW", "3 Series", 120000);
 
-const obj = {}
+console.log(car1.info());
+car1.drive(5000);
+console.log(car1.info());
 
-Object.assign(obj, person, {name: "Giorgi", age: 17});
-console.log(obj);
+console.log(car2.info());
+car2.drive(1500);
+console.log(car2.info());
