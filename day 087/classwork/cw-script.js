@@ -1,19 +1,21 @@
 const cont = document.querySelector("#container");
 const contId = document.querySelector("#container").id;
+const contList = container.children;
+const buttList = document.querySelectorAll("button");
+
 
 cont.parentElement.style.backgroundColor = "beige";
 
-const contList = container.children;
 for(let i = 0; i < contList.length; i++) {
     contList[i].className = "card";
     contList[i].id = "card" + (i + 1);
 };
 
-const buttList = document.querySelectorAll("button");
 for(let i = 0; i < buttList.length; i++) {
     buttList[i].className = "butt";
     buttList[i].id = "butt" + (i + 1);
 };
+
 
 const addCard = (x) => {
     const newDiv = document.createElement("div");
