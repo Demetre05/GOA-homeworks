@@ -25,7 +25,7 @@ const addCard = (x) => {
     return document.getElementById(x).appendChild(newDiv);
 };
 
-const changeCard = (x) => {
+const changeCards = (x) => {
     for(let i = 0; i < x.length; i++) {
         x[i].style.backgroundColor = "green";
     }
