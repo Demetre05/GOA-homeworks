@@ -1,4 +1,7 @@
-const container = document.querySelector("#container");
+const cont = document.querySelector("#container");
+const contId = document.querySelector("#container").id;
+
+cont.parentElement.style.backgroundColor = "beige";
 
 const contList = container.children;
 for(let i = 0; i < contList.length; i++) {
@@ -19,12 +22,13 @@ const addCard = (x) => {
     newDiv.textContent = "ახალი ბარათი";
     newDiv.style.display = "linear";
     newDiv.style.backgroundColor = "yellow";
-    return x.appendChild(newDiv);
+    return document.getElementById(x).appendChild(newDiv);
 };
 
 const changeCard = (x) => {
-    for(let i = 0; i < x.length; i++)
-    x[i].style.backgroundColor = "green";
+    for(let i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "green";
+    }
 };
 
-const removeCard = (x) => x.remove();
+const removeCard = (x) => x[x.length - 1].remove();
