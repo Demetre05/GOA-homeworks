@@ -1,5 +1,13 @@
+document.body.innerHTML = `
+    <div id="container"></div>
+    <p>question 1 / 5</p>
+    <p>score: 0</p>
+    <button id="btn">next</button>`;
+
 const container = document.querySelector("#container");
-const btn = document.querySelector("button");
+const btn = document.querySelector("#btn");
+const p1 = document.querySelectorAll("p")[0];
+const p2 = document.querySelectorAll("p")[1];
 
 const questionsList = [
     `<h1>რა არის JavaScript?</h1>
@@ -52,3 +60,26 @@ const correctAnswers = [
 ];
 
 container.innerHTML = questionsList[0];
+const options = document.getElementById("options").children;
+const optionsList = []
+for(let i = 0; i < options.length; i++) {
+    optionsList.push(options[i]);
+};
+
+btn.addEventListener("click", () => {
+    const ind = questionsList.findIndex(i => {
+        return i === container.innerHTML;
+    });
+    container.innerHTML = questionsList[ind + 1];
+    p1.innerHTML = `question ${ind + 2} / 5`;
+});
+
+optionsList.forEach(x => {
+    x.addEventListener("click", () => {
+        if(correctAnswers) {
+            x.style.backgroundColor = "lightgreen";
+        } else {
+            x.style.backgroundColor = "red";
+        }
+    })
+});
