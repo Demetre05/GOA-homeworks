@@ -1,45 +1,54 @@
 const container = document.querySelector("#container");
+const btn = document.querySelector("button");
 
 const questionsList = [
     `<h1>რა არის JavaScript?</h1>
     <div id="options">
-        <p>[ პროგრამირების ენა ]</p>
-        <p>[ ოპერაციული სისტემა ]</p>
-        <p>[ ბრაუზერი ]</p>
-        <p>[ მონაცემთა ბაზა ]</p>
+        <button>პროგრამირების ენა</button>
+        <button>ოპერაციული სისტემა</button>
+        <button>ბრაუზერი</button>
+        <button>მონაცემთა ბაზა</button>
     </div>`,
 
     `<h1>რა მონაცემთა ტიპია "Hello World"?</h1>
     <div id="options">
-        <p>number</p>
-        <p>boolean</p>
-        <p>string</p>
-        <p>object</p>
+        <button>number</button>
+        <button>boolean</button>
+        <button>string</button>
+        <button>object</button>
     </div>`,
 
-    `<h1>რომელი გამოიყენება მუდმივი ცვლადისთვის</h1>
+    `<h1>რომელი keyword-ი გამოიყენება მუდმივი ცვლადისთვის</h1>
     <div id="options">
-        <p>var</p>
-        <p>const</p>
-        <p>let</p>
-        <p>set</p>
+        <button>var</button>
+        <button>const</button>
+        <button>let</button>
+        <button>set</button>
     </div>`,
 
     `<h1>როგორ აცხადებთ ფუნქციას?</h1>
     <div id="options">
-        <p>function myFunc()</p>
-        <p>func myFunc()</p>
-        <p>create myFunc()</p>
-        <p>def myFunc()</p>
+        <button>function myFunc()</button>
+        <button>func myFunc()</button>
+        <button>create myFunc()</button>
+        <button>def myFunc()</button>
     </div>`,
 
     `<h1>რომელია მასივის პირველი ინდექსი?</h1>
     <div id="options">
-        <p>-1</p>
-        <p>1</p>
-        <p>0</p>
-        <p>first</p>
+        <button>-1</button>
+        <button>1</button>
+        <button>0</button>
+        <button>first</button>
     </div>`
+];
+
+const correctAnswers = [
+    `<button>პროგრამირების ენა</button>`,
+    `<button>string</button>`,
+    `<button>const</button>`,
+    `<button>function myFunc()</button>`,
+    `<button>0</button>`
 ];
 
 container.innerHTML = questionsList[0];
