@@ -60,11 +60,6 @@ const correctAnswers = [
 ];
 
 container.innerHTML = questionsList[0];
-const options = document.getElementById("options").children;
-const optionsList = []
-for(let i = 0; i < options.length; i++) {
-    optionsList.push(options[i]);
-};
 
 btn.addEventListener("click", () => {
     const ind = questionsList.findIndex(i => {
@@ -74,12 +69,18 @@ btn.addEventListener("click", () => {
     p1.innerHTML = `question ${ind + 2} / 5`;
 });
 
-optionsList.forEach(x => {
-    x.addEventListener("click", () => {
-        if(correctAnswers) {
-            x.style.backgroundColor = "lightgreen";
+const options = document.getElementById("options").children;
+const optionsList = [];
+for(let i = 0; i < options.length; i++) {
+    optionsList.push(options[i]);
+};
+
+optionsList.forEach(i => {
+    i.addEventListener("click", () => {
+        if(correctAnswers.includes(i)) {
+            i.style.backgroundColor = "lightgreen";
         } else {
-            x.style.backgroundColor = "red";
+            i.style.backgroundColor = "red";
         }
     })
 });
