@@ -8,79 +8,101 @@ const container = document.querySelector("#container");
 const btn = document.querySelector("#btn");
 const p1 = document.querySelectorAll("p")[0];
 const p2 = document.querySelectorAll("p")[1];
+let count = 1;
+let point = 0
+
 
 const questionsList = [
-    `<h1>რა არის JavaScript?</h1>
-    <div id="options">
-        <button>პროგრამირების ენა</button>
-        <button>ოპერაციული სისტემა</button>
-        <button>ბრაუზერი</button>
-        <button>მონაცემთა ბაზა</button>
-    </div>`,
+    {
+        header: "რა არის JavaScript?",
+        btn1: "პროგრამირების ენა",
+        btn2: "ოპერაციული სისტემა",
+        btn3: "ბრაუზერი",
+        btn4: "მონაცემთა ბაზა"
+    },
 
-    `<h1>რა მონაცემთა ტიპია "Hello World"?</h1>
-    <div id="options">
-        <button>number</button>
-        <button>boolean</button>
-        <button>string</button>
-        <button>object</button>
-    </div>`,
+    {
+        header: "რა მონაცემთა ტიპია 'Hello World'?",
+        btn1: "number",
+        btn2: "boolean",
+        btn3: "string",
+        btn4: "object"
+    },
 
-    `<h1>რომელი keyword-ი გამოიყენება მუდმივი ცვლადისთვის</h1>
-    <div id="options">
-        <button>var</button>
-        <button>const</button>
-        <button>let</button>
-        <button>set</button>
-    </div>`,
-
-    `<h1>როგორ აცხადებთ ფუნქციას?</h1>
-    <div id="options">
-        <button>function myFunc()</button>
-        <button>func myFunc()</button>
-        <button>create myFunc()</button>
-        <button>def myFunc()</button>
-    </div>`,
-
-    `<h1>რომელია მასივის პირველი ინდექსი?</h1>
-    <div id="options">
-        <button>-1</button>
-        <button>1</button>
-        <button>0</button>
-        <button>first</button>
-    </div>`
+    {
+        header: "რომელი keyword-ი გამოიყენება მუდმივი ცვლადისთვის?",
+        btn1: "var",
+        btn2: "const",
+        btn3: "let",
+        btn4: "set"
+    },
+    
+    {
+        header: "როგორ აცხადებთ ფუნქციას?",
+        btn1: "function myFunc()",
+        btn2: "func myFunc()",
+        btn3: "create myFunc()",
+        btn4: "def myFunc()"
+    },
+    
+    {
+        header: "რომელია მასივის პირველი ინდექსი?",
+        btn1: "-1",
+        btn2: "1",
+        btn3: "0",
+        btn4: "first"
+    }
 ];
 
-const correctAnswers = [
-    `<button>პროგრამირების ენა</button>`,
-    `<button>string</button>`,
-    `<button>const</button>`,
-    `<button>function myFunc()</button>`,
-    `<button>0</button>`
-];
-
-container.innerHTML = questionsList[0];
-
-btn.addEventListener("click", () => {
-    const ind = questionsList.findIndex(i => {
-        return i === container.innerHTML;
-    });
-    container.innerHTML = questionsList[ind + 1];
-    p1.innerHTML = `question ${ind + 2} / 5`;
-});
-
-const options = document.getElementById("options").children;
-const optionsList = [];
-for(let i = 0; i < options.length; i++) {
-    optionsList.push(options[i]);
+const correctAnswers = {
+    quest1: "პროგრამირების ენა",
+    quest2: "string",
+    quest3: "const",
+    quest4: "function myFunc()",
+    quest5: "0"
 };
 
-optionsList.forEach(i => {
-    i.addEventListener("click", () => {
-        if(correctAnswers.includes(i)) {
-            i.style.backgroundColor = "lightgreen";
-        } else {
-            i.style.backgroundColor = "red";
-        }
-    })
+const questFact = (n) => {
+    return container.innerHTML = `
+    <h1>${questionsList[n].header}</h1>
+    <div id="options">
+        <button onclick="checkFunc(event)">${questionsList[n].btn1}</button>
+        <button onclick="checkFunc(event)">${questionsList[n].btn2}</button>
+        <button onclick="checkFunc(event)">${questionsList[n].btn3}</button>
+        <button onclick="checkFunc(event)">${questionsList[n].btn4}</button>
+    </div>`
+};
+
+container.innerHTML = questFact(count-1);
+const options = document.getElementById("options").children;
+
+btn.addEventListener("click", () => {
+    questFact(count);
+    count++;
+    p1.innerHTML = `question ${count} / 5`;
 });
+
+
+const deleteOnclick = () => {
+    for(let i = 0; i < container.children[1].children.length; i++) {
+        container.children[1].children[i].onclick = "";
+    }
+};
+
+const checkFunc = (e) => {
+    if(e.target.innerHTML === correctAnswers[`quest${count}`]) {
+        e.target.style.backgroundColor = "lightgreen";
+        p2.innerHTML = `score: ${point += 1}`;
+        deleteOnclick();
+    } else {
+        e.target.style.backgroundColor = "red";
+        // for(let i = 0; i < options.length; i++) {
+        //     for(j in correctAnswers) {
+        //         if(options[i].textContent === correctAnswers[j]) {
+        //             options[i].style.backgroundColor = "lightgreen";
+        //         }
+        //     }
+        // }
+        deleteOnclick();
+    }
+};
