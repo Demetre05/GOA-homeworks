@@ -64,7 +64,7 @@ const correctAnswers = {
 const questFact = (n) => {
     return container.innerHTML = `
     <h1>${questionsList[n].header}</h1>
-    <div id="options" class="options-${n}">
+    <div id="options">
         <button onclick="checkFunc(event)">${questionsList[n].btn1}</button>
         <button onclick="checkFunc(event)">${questionsList[n].btn2}</button>
         <button onclick="checkFunc(event)">${questionsList[n].btn3}</button>
