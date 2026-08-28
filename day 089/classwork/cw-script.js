@@ -2,15 +2,14 @@ document.body.innerHTML = `
     <div id="container"></div>
     <p>question 1 / 5</p>
     <p>score: 0</p>
-    <button id="btn">next</button>`;
+    <button id="btn">Next</button>`;
 
 const container = document.querySelector("#container");
 const btn = document.querySelector("#btn");
 const p1 = document.querySelectorAll("p")[0];
 const p2 = document.querySelectorAll("p")[1];
 let count = 1;
-let point = 0
-
+let point = 0;
 
 const questionsList = [
     {
@@ -65,7 +64,7 @@ const correctAnswers = {
 const questFact = (n) => {
     return container.innerHTML = `
     <h1>${questionsList[n].header}</h1>
-    <div id="options">
+    <div id="options" class="options-${n}">
         <button onclick="checkFunc(event)">${questionsList[n].btn1}</button>
         <button onclick="checkFunc(event)">${questionsList[n].btn2}</button>
         <button onclick="checkFunc(event)">${questionsList[n].btn3}</button>
@@ -73,15 +72,20 @@ const questFact = (n) => {
     </div>`
 };
 
-container.innerHTML = questFact(count-1);
-const options = document.getElementById("options").children;
+questFact(count-1);
 
 btn.addEventListener("click", () => {
-    questFact(count);
-    count++;
-    p1.innerHTML = `question ${count} / 5`;
+    if(count < 5) {
+        questFact(count);
+        count++;
+    } else if(count === 5) {
+        btn.addEventListener("click", () => {
+            document.body.innerHTML = `
+            <p style="font-size: 32px">Final Score: ${point}</p>`;
+        });
+    }
+    p1.textContent = `question ${count} / 5`;    
 });
-
 
 const deleteOnclick = () => {
     for(let i = 0; i < container.children[1].children.length; i++) {
@@ -92,17 +96,10 @@ const deleteOnclick = () => {
 const checkFunc = (e) => {
     if(e.target.innerHTML === correctAnswers[`quest${count}`]) {
         e.target.style.backgroundColor = "lightgreen";
-        p2.innerHTML = `score: ${point += 1}`;
+        p2.textContent = `score: ${point += 1}`;
         deleteOnclick();
     } else {
         e.target.style.backgroundColor = "red";
-        // for(let i = 0; i < options.length; i++) {
-        //     for(j in correctAnswers) {
-        //         if(options[i].textContent === correctAnswers[j]) {
-        //             options[i].style.backgroundColor = "lightgreen";
-        //         }
-        //     }
-        // }
         deleteOnclick();
     }
 };
