@@ -77,7 +77,7 @@ questFact(count-1);
 btn.addEventListener("click", () => {
     if(count < 5) {
         questFact(count);
-        count++;
+        ++count;
     } else if(count === 5) {
         btn.addEventListener("click", () => {
             document.body.innerHTML = `
@@ -96,7 +96,7 @@ const deleteOnclick = () => {
 const checkFunc = (e) => {
     if(e.target.innerHTML === correctAnswers[`quest${count}`]) {
         e.target.style.backgroundColor = "lightgreen";
-        p2.textContent = `score: ${point += 1}`;
+        p2.textContent = `score: ${++point}`;
         deleteOnclick();
     } else {
         e.target.style.backgroundColor = "red";
