@@ -73,10 +73,12 @@ const questFact = (n) => {
 };
 
 questFact(count-1);
+let options = document.querySelector("#options").children;
 
 btn.addEventListener("click", () => {
     if(count < 5) {
         questFact(count);
+        options = document.querySelector("#options").children;
         ++count;
     } else if(count === 5) {
         btn.addEventListener("click", () => {
@@ -100,6 +102,11 @@ const checkFunc = (e) => {
         deleteOnclick();
     } else {
         e.target.style.backgroundColor = "red";
+        for(let i = 0; i < options.length; i++) {
+            if(Object.values(correctAnswers).includes(options[i].textContent)) {
+                options[i].style.backgroundColor = "lightgreen";
+            }
+        }
         deleteOnclick();
     }
 };
