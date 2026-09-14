@@ -31,7 +31,7 @@ AddContact.addEventListener("click", (e) => {
 const deleteFunc = (e) => {
     e.target.parentElement.remove();
     const num = contactList.findIndex((i) => {
-        return e.target.parentElement.id === `Contacts(${i.id})`;
+        return e.target.parentElement.id === `contact-${i.id}`;
     });
     contactList.splice(num, 1);
     id = contactList.length;
