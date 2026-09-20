@@ -21,6 +21,6 @@ for(const el of skills) {
 const showSkills = (first, ...otherSkills) => {
     console.log(first);
     console.log(otherSkills);
-}
+};
 
 showSkills(skills[0], skills[1], skills[2]);
