@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <button>increase</button>
-    <p>0</p>
-    <button>decrease</button>
+    <h1>Todo App — Filters + Priority</h1>
+
+    <div id="stats">
+        <h2 id="all">all (5)</h2>
+        <h2 id="active">active (5)</h2>
+        <h2 id="completed">completed (0)</h2>
+    </div>
+
+    <div>
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="deleteAll()">Delete All</button>
+    </div>
+
+    <main></main>
 
     <script src="./script.js"></script>
 </body>
