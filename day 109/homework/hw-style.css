@@ -10,14 +10,21 @@
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5rem;
 }
 
 main {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 32px;
 }
 
 button {

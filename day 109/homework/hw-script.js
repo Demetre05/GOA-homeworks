@@ -1,20 +1,24 @@
 const main = document.querySelector("main");
-let count = 0;
 
 let questions = JSON.parse(localStorage.getItem("questions"));
 let scores = JSON.parse(localStorage.getItem("scores"));
-
 let i = questions.findIndex(q => q.isAnswered === false);
 let answersList = [questions[i].a1, questions[i].a2, questions[i].a3, questions[i].a4];
 
 const renderQuestion = () => {
-    main.innerHTML = `
-    <h1>${questions[i].title}</h1>
-    <button onclick="check(event)">${questions[i].a1[0]}</button>
-    <button onclick="check(event)">${questions[i].a2[0]}</button>
-    <button onclick="check(event)">${questions[i].a3[0]}</button>
-    <button onclick="check(event)">${questions[i].a4[0]}</button>
-    <button onclick="next()" id="next">Next</button>`;
+    if(i < 10) {
+        main.innerHTML = `
+        <h1>${questions[i].title}</h1>
+        <button onclick="check(event)">${questions[i].a1[0]}</button>
+        <button onclick="check(event)">${questions[i].a2[0]}</button>
+        <button onclick="check(event)">${questions[i].a3[0]}</button>
+        <button onclick="check(event)">${questions[i].a4[0]}</button>
+        <button onclick="next()" id="next">Next</button>`;
+    } else {
+        main.innerHTML = `
+        <h1>Score: <b>${questions[i].answeredQuestions.length}</b></h1>
+        <button onclick="reset()">Restart</button>`;
+    }
 };
 renderQuestion();
 
@@ -23,35 +27,33 @@ let check = e => {
     if(questions[i].isAnswered === false) {
         if(e.target.textContent === answersList[correctAnswer][0]) {
             e.target.style.border = "3px solid green";
-            count++;
+            questions[10].answeredQuestions.push(i+1);
+            localStorage.setItem("questions", JSON.stringify(questions));
         } else {
             e.target.style.border = "3px solid red";
             let currentMain = main.querySelectorAll("button");
             currentMain[correctAnswer].style.border = "3px solid green";
         }
         questions[i].isAnswered = true;
-        localStorage.setItem("questions", JSON.stringify(questions));
-    } 
+        localStorage.setItem("questions", JSON.stringify(questions))}
 };
 
 const next = () => {
-    if(i < 9) {
-        if(questions[i].isAnswered === true) {
-            i = questions.findIndex(q => q.isAnswered === false);
-            answersList = [questions[i].a1, questions[i].a2, questions[i].a3, questions[i].a4];
-            renderQuestion()}
-    } else {
-        main.innerHTML = `
-        <h1>Score: <b>${count}</b></h1>
-        <button onclick="renderQuestion()">Restart</button>`;
-        scores.push(count);
-        localStorage.setItem("scores", JSON.stringify(scores));
-        count = 0;
-        questions.forEach(q => q.isAnswered = false);
-        localStorage.setItem("questions", JSON.stringify(questions));
+    if(questions[i].isAnswered === true) {
         i = questions.findIndex(q => q.isAnswered === false);
-        answersList = [questions[i].a1, questions[i].a2, questions[i].a3, questions[i].a4];
-    }
+        answersList = [questions[i].a1, questions[i].a2, questions[i].a3, questions[i].a4]};
+    renderQuestion();
+};
+
+const reset = () => {
+    scores.push(questions[10].answeredQuestions);
+    localStorage.setItem("scores", JSON.stringify(scores));
+    questions[10].answeredQuestions = [];
+    questions.forEach(q => q.isAnswered = false);
+    localStorage.setItem("questions", JSON.stringify(questions));
+    i = questions.findIndex(q => q.isAnswered === false);
+    answersList = [questions[i].a1, questions[i].a2, questions[i].a3, questions[i].a4];
+    renderQuestion();
 };
 
 // const questionsList = [
@@ -134,5 +136,11 @@ const next = () => {
 //         a3: ["C) 4 times", false],
 //         a4: ["D) Infinitely", false],
 //         isAnswered: false
+//     },
+//     {
+//         answeredQuestions: [],
+//         isAnswered: false
 //     }
 // ];
+// localStorage.setItem("questions", JSON.stringify(questionsList));
+// localStorage.setItem("scores", JSON.stringify([]));
