@@ -5,10 +5,11 @@ let scores = JSON.parse(localStorage.getItem("scores"));
 
 scores.forEach(s => {
     let txt = "";
-    s.forEach(n => txt += n);
+    s[0].forEach(n => txt += n);
     main.innerHTML += `
     <div>
-        <p>${txt}</p>
+        <b>${txt ? txt : "0"}</b>
+        <p>${s[1]}</p>
         <button class="btns" onclick="deleteScore(event)">Delete</button>
     </div>`;
 });
@@ -21,6 +22,6 @@ btn.addEventListener("click", () => {
 
 const deleteScore = e => {
     e.target.parentElement.remove();
-    scores.splice(scores.findIndex(s => e.target.parentElement.querySelector("p").textContent === s.join("")), 1);
+    scores.splice(scores.findIndex(s => e.target.parentElement.querySelector("b").textContent === s[0].join("")), 1);
     localStorage.setItem("scores", JSON.stringify(scores));
 };

@@ -46,7 +46,9 @@ const next = () => {
 };
 
 const reset = () => {
-    scores.push(questions[10].answeredQuestions);
+    let d = new Date(Date.now()).toLocaleString();
+    scores.push([questions[10].answeredQuestions, d]);
+    scores.splice(0, scores.length - 5);
     localStorage.setItem("scores", JSON.stringify(scores));
     questions[10].answeredQuestions = [];
     questions.forEach(q => q.isAnswered = false);
